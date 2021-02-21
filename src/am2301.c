@@ -27,8 +27,8 @@ Lesser General Public License for more details.
 #include <sys/types.h>
 #include <sys/stat.h>
 
-/* Connect DATA to GPIO24 (pin 18). In wiringPi pin number is 5 */
-static const int _pin_am2301 = 5;
+/* Connect DATA to GPIO18 (pin 12). In wiringPi pin number is 1 */
+static const int _pin_am2301 = 1;
 
 static void do_init(void);
 
