@@ -176,15 +176,18 @@ int main(int argc, char *argv[])
     while (i < 10) {
 	ret = read_am2301(&s, 1);
 	if (ret == 0) {
-	    printf("t=%.1f\nrh=%.1f\n", s.t, s.rh);
+        /* Output Json line format to simplify processing in external tool*/
+	    printf("{'t'='%.1f','rh'='%.1f','retry'=%d", s.t, s.rh,i);
 	    break;
 	}
+    else
 	delay(2000);
 	i++;
     }
 
     if (i > 10) {
-	return -1;
+	    printf("{'t'='-1','rh'='-1','retry'=%d",i);
+        return -1;
     }
     return 0;
 }
