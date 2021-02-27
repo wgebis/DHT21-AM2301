@@ -13,16 +13,16 @@ Le capteur est un AM2301 qui est semblable à un DHT22 mais vous verrez qu'il ne
 <img src="images/am2301_dht21.jpg" alt="AM2301" width="800"> </img>
 
 Lors de son achat en 2016, il ne fonctionnait pas avec le Rpi1 avec des tests par défaut.
-En 2018, la mise en place d'un OrangePi zéro H2+ avec ce capteur a permit de le faire fonctionner.
+En 2018, la mise en place d'un OrangePi zéro H2+ avec ce capteur a permit de le faire fonctionner ([lien](https://github.com/jingl3s/DHT11-DHT22-Python-library-Orange-PI)).
 
 Pour faire court :
 * La résistance  de tirage est déjà présente 
 * Avec un petit peu d'huile de coude et heure, le dépôt suivant avec du code Pythons a fonctionné. 
-* Le code a ensuite été intégré dans quelques autre projets sur OrangePi et un affichage ssd 1306 en i2c
+* Le code a ensuite été intégré dans quelques autre projets sur OrangePi et un affichage ssd 1306 en i2c [lien](https://github.com/jingl3s/OrangePiZero_OLED_Dht_display)
 
 Mais avec le mise en place de home-assistant sur un netbook et un capteur DS18B20, il fallait bien se rendre à l'évidence que le taux d'humidité en plus serait pas mal.
 
-Nous y voila en 2021 en train de bricoler se capteur avec un Rpi1 pour ensuite le mettre sur le Rpi associé à home-assistant.
+Nous y voila en 2021 en train de bricoler ce capteur avec un Rpi1 pour ensuite le mettre sur le Rpi associé à home-assistant.
 
 ## Investigations
 
@@ -112,7 +112,3 @@ rh=23.6
   * Humidite
   * Success ou echec
   * Nombre d'essais avant d'avoir la valeur
-* Mise en place d'un script Python pour appeler le script et lire les valeurs
-* Ajouter le DHT11
-* Ajouter des DS18B20
-* Calibrer les valeurs
