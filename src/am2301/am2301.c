@@ -28,7 +28,7 @@ Lesser General Public License for more details.
 #include <sys/stat.h>
 
 /* Connect DATA to GPIO18 (pin 12). In wiringPi pin number is 1 */
-static const int _pin_am2301 = 1;
+static const int _pin_am2301 = 7;
 
 static void do_init(void);
 
@@ -177,7 +177,7 @@ int main(int argc, char *argv[])
 	ret = read_am2301(&s, 1);
 	if (ret == 0) {
         /* Output Json line format to simplify processing in external tool*/
-	    printf("{'t'='%.1f','rh'='%.1f','retry'=%d", s.t, s.rh,i);
+	    printf("{'t'='%.1f','rh'='%.1f','retry'=%d}", s.t, s.rh, r);
 	    break;
 	}
     else
