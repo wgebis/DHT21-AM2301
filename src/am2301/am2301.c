@@ -177,7 +177,7 @@ int main(int argc, char *argv[])
 	ret = read_am2301(&s, 1);
 	if (ret == 0) {
         /* Output Json line format to simplify processing in external tool*/
-	    printf("{'t':'%.1f','rh':'%.1f','retry':%d}", s.t, s.rh, i);
+	    printf("{\"t\":\"%.1f\",\"rh':\"%.1f\",\"retry\":\"%d\"}", s.t, s.rh, i);
 	    break;
 	}
     else
