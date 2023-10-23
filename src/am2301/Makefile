@@ -17,7 +17,7 @@ OBJS	= am2301.$(OE)
 OBJDIR	= obj
 
 _OBJS	= $(patsubst %,$(OBJDIR)/%,$(OBJS))
-LIBS	= -lwiringPi
+LIBS	= -lwiringPi -lpthread
 
 INCLUDE = -I. -I/include -I../
 
