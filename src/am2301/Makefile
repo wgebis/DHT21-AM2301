@@ -37,7 +37,7 @@ all: $(OBJDIR) $(_OBJS)
 	$(CC) -o $(PROG) $(_OBJS) $(INCLUDE) $(LIBS)
 
 install: $(PROG)
-	$(INSTALL) -m 0655 $(PROG) /usr/sbin
+	$(INSTALL) -m 0655 $(PROG) /usr/local/bin
 
 uninstall:
 	$(RM) -f /usr/sbin/$(PROG)
